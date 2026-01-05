@@ -1,34 +1,5 @@
 {
-    "scripts": {
-        "KI Web Server": {
-            "path": "d:\\server\\project_ki_web\\start_app_final.bat",
-            "autostart": true
-        },
-        "E-Mail Service": {
-            "path": "d:\\server\\eemail\\start.bat",
-            "autostart": true
-        },
-        "BauKI Chat 21344": {
-            "path": "D:/server/BauKI/start_streamlit_21344.bat",
-            "autostart": true
-        },
-        "BauKI Chat 8085": {
-            "path": "D:/server/BauKI/start_streamlit_8085.bat",
-            "autostart": true
-        },
-        "BauKI Chat 8588": {
-            "path": "d:\\server\\BauKI\\start_streamlit_8588.bat",
-            "autostart": true
-        },
-        "UML Diagramm Server": {
-            "path": "D:/server/project-uml/start.bat",
-            "autostart": true
-        },
-        "nginx balance": {
-            "path": "D:/server/BauKI/nginx/start_nginx.bat",
-            "autostart": true
-        }
-    },
+    "scripts": {},
     "global_start_delay_seconds": 5,
-    "autostart_enabled": true
+    "autostart_enabled": false
 }
