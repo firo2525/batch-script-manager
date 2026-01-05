@@ -1,35 +1,35 @@
 # Batch Script Manager
 
-Ein leistungsstarker, Python-basierter Manager mit grafischer Benutzeroberfläche (GUI) zur Verwaltung, Überwachung und Automatisierung von Windows-Batch-Skripten.
+A powerful, Python-based manager with a graphical user interface (GUI) to manage, monitor, and automate Windows batch scripts.
 
 ## Features
 
-- **Zentralisierte Steuerung**: Starten, Stoppen und Neustarten mehrerer Batch-Skripte über eine einzige Oberfläche.
-- **Echtzeit-Monitoring**: Live-Anzeige der Konsolenausgaben (Logs) für jedes Skript in eigenen Tabs.
-- **Autostart-System**: Automatisches Starten von Skripten beim Programmstart mit konfigurierbarer Verzögerung (`global_start_delay_seconds`).
-- **Ressourcen-Überwachung**: Anzeige von Prozess-IDs (PID) und CPU-Auslastung (erfordert `psutil`).
-- **Benachrichtigungen**: Desktop-Benachrichtigungen bei Statusänderungen (erfordert `plyer`).
-- **Silent Mode**: Möglichkeit, den Manager im Hintergrund ohne Konsolenfenster zu starten.
-- **Log-Management**: Automatische Protokollierung der Manager-Aktivitäten.
+- **Centralized Control**: Start, stop, and restart multiple batch scripts from a single interface.
+- **Real-time Monitoring**: Live display of console outputs (logs) for each script in dedicated tabs.
+- **Autostart System**: Automatically launch scripts on program startup with a configurable delay (`global_start_delay_seconds`).
+- **Resource Monitoring**: View Process IDs (PID) and CPU usage (requires `psutil`).
+- **Notifications**: Desktop notifications for status changes (requires `plyer`).
+- **Silent Mode**: Option to run the manager in the background without a console window.
+- **Log Management**: Automatic logging of manager activities.
 
 ## Installation
 
-1. **Python installieren**: Stellen Sie sicher, dass Python 3.x auf Ihrem System installiert ist.
-2. **Abhängigkeiten installieren (optional, aber empfohlen)**:
-   Öffnen Sie ein Terminal im Projektordner und führen Sie aus:
+1. **Install Python**: Ensure Python 3.x is installed on your system.
+2. **Install Dependencies (optional but recommended)**:
+   Open a terminal in the project folder and run:
    ```bash
    pip install psutil plyer
    ```
 
-## Konfiguration
+## Configuration
 
-Die Konfiguration erfolgt über die Datei [config.json](config.json). Hier können Sie Ihre Skripte definieren:
+Configuration is handled via the [config.json](config.json) file. You can define your scripts here:
 
 ```json
 {
     "scripts": {
-        "Mein Skript": {
-            "path": "C:\\Pfad\\zu\\deinem\\skript.bat",
+        "My Script": {
+            "path": "C:\\path\\to\\your\\script.bat",
             "autostart": true
         }
     },
@@ -38,29 +38,29 @@ Die Konfiguration erfolgt über die Datei [config.json](config.json). Hier könn
 }
 ```
 
-- `path`: Absoluter Pfad zur `.bat` Datei.
-- `autostart`: Ob dieses spezifische Skript automatisch starten soll.
-- `global_start_delay_seconds`: Zeit in Sekunden zwischen den automatischen Starts der Skripte.
-- `autostart_enabled`: Globaler Schalter für die Autostart-Funktion.
+- `path`: Absolute path to the `.bat` file.
+- `autostart`: Whether this specific script should start automatically.
+- `global_start_delay_seconds`: Time in seconds between automatic starts of scripts.
+- `autostart_enabled`: Global toggle for the autostart feature.
 
-## Starten des Programms
+## Running the Program
 
-Es gibt drei Möglichkeiten, den Manager zu starten:
+There are three ways to start the manager:
 
-1. **Normaler Start**: Doppelklick auf [start_manager.bat](start_manager.bat).
-2. **Silent Start (Hintergrund)**: Doppelklick auf [start_silent.vbs](start_silent.vbs). Dies startet das Programm ohne sichtbares Konsolenfenster.
-3. **Über die Kommandozeile**:
+1. **Normal Start**: Double-click [start_manager.bat](start_manager.bat).
+2. **Silent Start (Background)**: Double-click [start_silent.vbs](start_silent.vbs). This starts the program without a visible console window.
+3. **Via Command Line**:
    ```bash
    python batch_manager.py
    ```
 
-## Projektstruktur
+## Project Structure
 
-- [batch_manager.py](batch_manager.py): Die Hauptanwendung (Python/Tkinter).
-- [config.json](config.json): Konfigurationsdatei für die zu verwaltenden Skripte.
-- [start_manager.bat](start_manager.bat): Batch-Datei zum einfachen Starten.
-- [start_silent.vbs](start_silent.vbs): VBScript für den lautlosen Start im Hintergrund.
+- [batch_manager.py](batch_manager.py): The main application (Python/Tkinter).
+- [config.json](config.json): Configuration file for the managed scripts.
+- [start_manager.bat](start_manager.bat): Batch file for easy startup.
+- [start_silent.vbs](start_silent.vbs): VBScript for silent background startup.
 
-## Lizenz
+## License
 
-Dieses Projekt ist unter der MIT-Lizenz lizenziert.
+This project is licensed under the [MIT License](LICENSE).
